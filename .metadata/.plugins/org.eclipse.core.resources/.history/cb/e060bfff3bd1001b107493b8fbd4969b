@@ -1,0 +1,19 @@
+package com.betha.login.repository;
+
+import java.sql.Connection;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.betha.login.model.User;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long>{
+		
+	Connection conn = null;
+	
+	List<String> getRegister() {
+		conn = ConnectionFactory.getConnection();
+	}
+}

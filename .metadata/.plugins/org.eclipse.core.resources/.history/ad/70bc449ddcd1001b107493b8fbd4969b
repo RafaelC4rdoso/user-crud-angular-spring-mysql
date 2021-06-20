@@ -1,0 +1,30 @@
+package com.betha.login.repository;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.betha.login.model.User;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long>{
+		
+	Connection conn = null;
+	Statement st = null;
+	ResultSet rs = null;
+	
+	public List<String> getRegister() {
+		List<String> register = null;
+		conn = ConnectionFactory.getConnection();
+		st = conn.createStatement();
+		rs = st.executeQuery("SELECT register FROM user");
+		while(rs.next()) {
+			register.add(rs.getString("register"));
+		}
+		return register;
+	}
+}

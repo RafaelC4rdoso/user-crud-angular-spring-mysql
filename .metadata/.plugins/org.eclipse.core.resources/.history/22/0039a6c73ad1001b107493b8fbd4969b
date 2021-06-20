@@ -1,0 +1,5 @@
+package com.betha.login.repository;
+
+public class ConnectionFactory {
+
+}

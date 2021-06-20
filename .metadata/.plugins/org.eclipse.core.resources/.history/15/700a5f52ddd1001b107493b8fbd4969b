@@ -1,0 +1,32 @@
+package com.betha.login.model.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+import com.betha.login.exception.SqlException;
+
+public class UserDAO {
+
+	Connection conn = null;
+	Statement st = null;
+	ResultSet rs = null;
+
+	List<String> getRegister() {
+		try {
+			List<String> register = null;
+
+			conn = ConnectionFactory.getConnection();
+			st = conn.createStatement();
+			rs = st.executeQuery("SELECT register FROM user");
+			while (rs.next()) {
+				register.add(rs.getString("register"));
+			}
+		} catch (SQLException e) {
+			throw new SqlException(e.getMessage());
+		}
+		return register;
+	}
+}
