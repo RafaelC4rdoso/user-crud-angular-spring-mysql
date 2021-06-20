@@ -8,6 +8,7 @@
       <th>Address</th>
       <th>Phone</th>
       <th>Register</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,9 @@
       <td>{{ user.address }}</td>
       <td>{{ user.phone }}</td>
       <td>{{ user.register }}</td>
+      <td>
+        <button class="btn btn-info" (click)="updateUser(user.id)">Update</button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -21,7 +21,6 @@ public class UserDAO {
 			conn = ConnectionFactory.getConnection();
 			st = conn.createStatement();
 			rs = st.executeQuery("SELECT register FROM user");
-			System.out.println("TESTE TESTE");
 			while (rs.next()) {
 				String str = rs.getString("register");
 				register.add(str);
@@ -29,7 +28,6 @@ public class UserDAO {
 		} catch (SQLException e) {
 			throw new SqlException(e.getMessage());
 		}
-		System.out.println(register);
 		return register;
 	}
 }

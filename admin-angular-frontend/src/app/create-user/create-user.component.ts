@@ -24,25 +24,25 @@ export class CreateUserComponent implements OnInit {
       for(var i = 0; i < this.userRegister.length; i++) {
         if(this.user.register == this.userRegister[i]) {
           alert("CPF/CNPJ Existentes")
-          break
+          throwError;
+          break;
         }
       }
       this.userService.createUser(this.user).subscribe( data => {
       console.log(data)
+      this.goToUserList();
     },
     error => console.log(error));
-    this.goToUserList();
   }
 
   private getUserRegister() {
     this.userService.getUserRegister().subscribe(data => {
       this.userRegister = data;
     })
-}
+  }
 
   goToUserList() {
     this.router.navigate(['/users']);
-
   }
 
   onSubmit() {
