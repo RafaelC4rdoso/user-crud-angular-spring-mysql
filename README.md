@@ -7,7 +7,7 @@ Este é um sistema que permite listar, cadastrar, atualizar e deletar usuários.
 É um **CRUD FullStack**, com __AngularJS 10__ e __Bootstrap 5__ para o frontend, e __Spring com API REST__ como backend,
 integrados a um banco de dados __MySQL__.
 Consegui em um semana realizá-lo, e com a documentação original do Angular e outros cursos, aprendi e apliquei
-conceitos como: componentes, serviços e routing, e como consumir a API REST. 
+conceitos como: componentes, serviços e routing, e como consumir a API REST. Para o backend, já possuía familiaridade.
 
 #FRONTEND
 
