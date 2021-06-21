@@ -10,6 +10,7 @@ Consegui em um semana realizá-lo, e com a documentação original do Angular e 
 conceitos como: componentes, serviços e routing, e como consumir a API REST. 
 
 #FRONTEND
+
 No frontend, todo as funcionalidades foram feitas com componentes, que consumiam o service
 para injeção de dependência, sendo todas as classes organizadas com o __NgModules__. Para navegação entre as views, utilizou-se 
 do **Router**. Alguns conceitos de *Programação Orientada a Objetos* foram utilizados (encapsulamento, polimorfismo). Adicionei 
