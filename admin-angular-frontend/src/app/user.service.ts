@@ -32,4 +32,8 @@ export class UserService {
   updateUser(id: number, user: User): Observable<Object> {
     return this.httpClient.put(`${this.baseURL}/${id}`, user);
   }
+
+  deleteUser(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
 }

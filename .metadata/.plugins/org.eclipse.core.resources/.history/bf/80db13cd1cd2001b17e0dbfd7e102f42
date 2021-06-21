@@ -77,7 +77,7 @@ public class UserController {
 		User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User id doesn't exist: " + id));
 		userRepository.delete(user);
 		Map<String, Boolean> response = new HashMap<>();
-		response.put("deleted", Boolean.TRUE);
+		response.put("deleted", true);
 		return ResponseEntity.ok(response);
 	}
 	
