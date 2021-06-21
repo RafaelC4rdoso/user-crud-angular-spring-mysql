@@ -1,11 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .footer {
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: blue;
   text-align: center;
-  color: white;
+}
+
+.footer svg {
+  margin: 10px;
+}
+
+.icon {
+  color: black;
+}
+
+.header {
+  background-color: white!important;
+}
+
+.header a{
+  margin-left: 4px;
+  color: black!important;
+  border-bottom: 3px solid black;
+  border-width: medium;
+  border-collapse: separate;
+}
+
+.header a:hover {
+  background-color: lightgray;
 }
