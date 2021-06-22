@@ -33,7 +33,7 @@ no frontend foi realizado a programação defensiva.
   - Rode o script (necessário ter um servidor instalado e operando, ex: wamp)
   
 #### COMO RODAR O SERVIDOR TOMCAT
-       
+   - Execute a classe principal como Spring App
        
 ## MELHORIAS A SEREM FEITAS
 
